@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion appCompileSdkVersion
+    buildToolsVersion appBuildToolsVersion
+
+    defaultConfig {
+        applicationId "com.meembusoft.recyclerview.sample"
+        minSdkVersion appMinSdkVersion
+        targetSdkVersion appTargetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    android {
+        lintOptions {
+            disable "UnsafeExperimentalUsageError",
+                    "UnsafeExperimentalUsageWarning",
+                    "TypographyFractions",
+                    "TypographyQuotes",
+                    "ObsoleteLintCustomCheck"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // AndroidX implementations
+    implementation "androidx.appcompat:appcompat:$androidXAppCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
+    implementation 'com.meembusoft.recyclerview:mrecyclerview:1.0.00'
+
+//    implementation project(":mrecyclerview")
+}
