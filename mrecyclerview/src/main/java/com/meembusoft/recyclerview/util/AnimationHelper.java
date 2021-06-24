@@ -12,13 +12,13 @@ import android.widget.AbsListView;
 import com.meembusoft.recyclerview.R;
 import com.meembusoft.recyclerview.effect.CardsEffect;
 import com.meembusoft.recyclerview.effect.CurlEffect;
+import com.meembusoft.recyclerview.effect.Effect;
 import com.meembusoft.recyclerview.effect.FadeEffect;
 import com.meembusoft.recyclerview.effect.FanEffect;
 import com.meembusoft.recyclerview.effect.FlipEffect;
 import com.meembusoft.recyclerview.effect.FlyEffect;
 import com.meembusoft.recyclerview.effect.GrowEffect;
 import com.meembusoft.recyclerview.effect.HelixEffect;
-import com.meembusoft.recyclerview.effect.Effect;
 import com.meembusoft.recyclerview.effect.ReverseFlyEffect;
 import com.meembusoft.recyclerview.effect.SlideInEffect;
 import com.meembusoft.recyclerview.effect.StandardEffect;
@@ -78,12 +78,12 @@ public class AnimationHelper implements AbsListView.OnScrollListener {
         int maxVelocity = 0;
 
         if (context != null && attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.JazzyListView);
-            transitionEffect = a.getInteger(R.styleable.JazzyListView_effect, STANDARD);
-            maxVelocity = a.getInteger(R.styleable.JazzyListView_max_velocity, MAX_VELOCITY_OFF);
-            mOnlyAnimateNewItems = a.getBoolean(R.styleable.JazzyListView_only_animate_new_items, false);
-            mOnlyAnimateOnFling = a.getBoolean(R.styleable.JazzyListView_max_velocity, false);
-            mSimulateGridWithList = a.getBoolean(R.styleable.JazzyListView_simulate_grid_with_list, false);
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MAnimation);
+            transitionEffect = a.getInteger(R.styleable.MAnimation_effect, STANDARD);
+            maxVelocity = a.getInteger(R.styleable.MAnimation_max_velocity, MAX_VELOCITY_OFF);
+            mOnlyAnimateNewItems = a.getBoolean(R.styleable.MAnimation_only_animate_new_items, false);
+            mOnlyAnimateOnFling = a.getBoolean(R.styleable.MAnimation_max_velocity, false);
+            mSimulateGridWithList = a.getBoolean(R.styleable.MAnimation_simulate_grid_with_list, false);
             a.recycle();
         }
 

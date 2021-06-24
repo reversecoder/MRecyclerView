@@ -84,7 +84,7 @@ public class MRecyclerViewScrollListener extends RecyclerView.OnScrollListener {
      * the list from animating under the users finger if they suddenly stop it.
      *
      * @param itemsPerSecond set to JazzyHelper.MAX_VELOCITY_OFF to turn off max velocity.
-     *                        While 13 is a good default, it is dependent on the size of your items.
+     *                       While 13 is a good default, it is dependent on the size of your items.
      */
     public void setMaxAnimationVelocity(int itemsPerSecond) {
         mHelper.setMaxAnimationVelocity(itemsPerSecond);
