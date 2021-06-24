@@ -44,7 +44,7 @@ dependencies {
     implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintLayoutVersion"
     implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
-    implementation 'com.meembusoft.recyclerview:mrecyclerview:1.0.00'
+//    implementation 'com.meembusoft.recyclerview:mrecyclerview:1.0.00'
 
-//    implementation project(":mrecyclerview")
+    implementation project(":mrecyclerview")
 }

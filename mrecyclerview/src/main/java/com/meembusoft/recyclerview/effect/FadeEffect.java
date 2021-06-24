@@ -17,6 +17,7 @@ public class FadeEffect implements Effect {
     @Override
     public void setupAnimation(View item, int position, int scrollDirection, ViewPropertyAnimator animator) {
         animator.setDuration(AnimationHelper.DURATION * DURATION_MULTIPLIER)
-                .alpha(AnimationHelper.OPAQUE);
+//                .alpha(AnimationHelper.OPAQUE);
+                .alpha(.05f);
     }
 }

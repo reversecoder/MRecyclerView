@@ -26,6 +26,7 @@ public class TiltEffect implements Effect {
                 .translationYBy(-item.getHeight() / 2 * scrollDirection)
                 .scaleX(1)
                 .scaleY(1)
-                .alpha(AnimationHelper.OPAQUE);
+//                .alpha(AnimationHelper.OPAQUE);
+                .alpha(.05f);
     }
 }
